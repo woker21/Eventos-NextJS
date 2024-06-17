@@ -1,10 +1,10 @@
 import Router from "./app/Router";
-import Eventos from "./components/Eventos";
-import UserProvider from "./components/UserProvider";
+import Eventos from "../components/Eventos";
+import UserProvider from "../components/UserProvider";
 
 const App = () =>
     <UserProvider><Router />
-        <Eventos />
+    <Eventos/>
     </UserProvider>
 
 export default App;
