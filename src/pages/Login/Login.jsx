@@ -1,8 +1,8 @@
-import { useUserContext } from '../components/UserProvider';
+import { useUserContext } from '../../components/UserProvider';
 import { useEffect, useState } from 'react';
-import { createHilo, signIn, loginWithGoogle, signUp, getUserById } from '../services/users';
+import { createHilo, signIn, loginWithGoogle, signUp, getUserById } from '../../app/services/users';
 import { onAuthStateChanged, signOut } from 'firebase/auth';
-import { auth } from '../services/api';
+import { auth } from '../../app/services/api';
 import { useNavigate } from 'react-router-dom';
 
 const Home = () => {
@@ -11,7 +11,6 @@ const Home = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [account, setCreateAccount] = useState(false);
-    const [hilo, setHilo] = useState('');
 
     /* const login = (e) => {
         e.preventDefault();
@@ -67,21 +66,6 @@ const Home = () => {
     }
 
     const navigate = useNavigate();
-    const crtHilo = (e) => {
-        e.preventDefault();
-        if (hilo.trim() === '') {
-            alert('Introduce un nombre para el hilo');
-            return;
-        }
-
-        createHilo({ userId: user.id, title: hilo }).then(id => {
-            if (!id) {
-                alert('Este hilo ya existe');
-            } else {
-                navigate('/hilos')
-            }
-        });
-    }
 
     useEffect(() => {
         if (!user) {
@@ -151,12 +135,6 @@ const Home = () => {
                     <p>{user.id} - {user.name} - {user.email}</p>
                     <br />
                     <button type='button' onClick={async () => { await signOut(auth); setUser(null) }}>Logout</button>
-                    <form action="">
-                        <h2>Crear hilos</h2>
-                        <input type="text" onChange={(e) => setHilo(e.target.value)} />
-                        <br />
-                        <button type='submit' onClick={(e) => crtHilo(e)}>Crear hilo</button>
-                    </form>
                 </div>
             }
         </div >
