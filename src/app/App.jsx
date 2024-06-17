@@ -4,7 +4,7 @@ import UserProvider from "../components/UserProvider";
 
 const App = () =>
     <UserProvider>
-    <Eventos/>
+        <Eventos />
     </UserProvider>
 
 export default App;
