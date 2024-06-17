@@ -1,4 +1,4 @@
-import Router from "./app/Router";
+import Router from "./Router";
 import UserProvider from "./components/UserProvider";
 
 const App = () =>
