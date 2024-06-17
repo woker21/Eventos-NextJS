@@ -1,5 +1,6 @@
 # Custom Dictionary Words
 cosas
+Creado
 Crear
 datos
 enviar
@@ -12,7 +13,9 @@ Llevar
 Lógica
 Manzana
 Nuevo
+Pediator
 Pizarra
 Plátano
+programadores
 serpiente
 usuarios
