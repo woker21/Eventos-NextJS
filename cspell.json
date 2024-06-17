@@ -1,0 +1,37 @@
+{
+    "version": "0.2",
+    "ignorePaths": [],
+    "dictionaryDefinitions": [
+        {
+            "name": "custom-dictionary",
+            "path": "./.cspell/custom-dictionary.txt",
+            "addWords": true
+        }
+    ],
+    "dictionaries": [
+        "custom-dictionary"
+    ],
+    "words": [
+        "Contenido",
+        "evento",
+        "Evento",
+        "eventos",
+        "Eventos",
+        "fecha",
+        "Inscripcion",
+        "inscripción",
+        "Inscripción",
+        "lista",
+        "Listado",
+        "María",
+        "nombre",
+        "Otros",
+        "participantes",
+        "perfil",
+        "Perfil",
+        "Suponiendo",
+        "tienes"
+    ],
+    "ignoreWords": [],
+    "import": []
+}
